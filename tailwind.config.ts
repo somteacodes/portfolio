@@ -1,4 +1,4 @@
-const { withMaterialColors } = require('tailwind-material-colors');
+const { withMaterialColors } = require("tailwind-material-colors");
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -18,19 +18,20 @@ const config: Config = {
   },
   plugins: [],
 };
-module.exports = withMaterialColors(config, {
-  // Your base colors as HEX values. 'primary' is required.
-  primary: '#ff0000',
-  // secondary and/or tertiary are optional, if not set they will be derived from the primary color.
-  secondary: '#ffff00',
-  tertiary: '#0000ff',
-  // add any named colors you need:
-  green: '#00ff00',
-  blue: '#0000ff'
+module.exports = withMaterialColors(
+  config,
+  {
+    // Your base colors as HEX values. 'primary' is required.
+    primary: "#006E2C",
+    // secondary and/or tertiary are optional, if not set they will be derived from the primary color.
+    // secondary: '#ffff00',
+    // tertiary: '#0000ff',
+    // add any named colors you need:
   },
   {
-  /* one of 'content', 'expressive', 'fidelity', 'monochrome', 'neutral', 'tonalSpot' or 'vibrant' */
-  scheme: 'content',
-  // contrast is optional and ranges from -1 (less contrast) to 1 (more contrast).
-  contrast: 0,
-  });
+    /* one of 'content', 'expressive', 'fidelity', 'monochrome', 'neutral', 'tonalSpot' or 'vibrant' */
+    scheme: "tonalSpot",
+    // contrast is optional and ranges from -1 (less contrast) to 1 (more contrast).
+    contrast: 0,
+  }
+);

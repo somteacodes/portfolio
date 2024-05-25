@@ -2,32 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+/* Path: frontend/app/components/TextBalance.css */
+@layer components {
+  body {
+    @apply bg-surface-variant;
+  }
+  /* common text styles */
+  .title-text {
+    @apply font-bold md:text-3xl text-2xl pb-6;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  .subtitle-text {
+    @apply font-bold;
+  }
+
+  /* Footer styles */
+  .footer-button {
+    @apply text-primary-container p-3 rounded-full bg-on-primary-container  self-start;
+  }
+  /* Header styles */
+
+  .desktop-navigation-container li {
+    @apply flex items-center;
+  }
+  .menu-item {
+    @apply px-6 py-3 rounded-full font-semibold text-lg mr-4 hover:bg-primary hover:text-on-primary;
+  }
+  .menu-active {
+    @apply bg-primary text-on-primary;
+  }
+
+  .mobile-menu-item {
+    @apply w-full py-5 text-on-primary  block text-center  font-bold text-lg cursor-pointer;
+  }
+  .mobile-navigation-container {
+    @apply w-full divide-y divide-on-primary;
+  }
+
+  .close-button {
+    @apply w-full flex justify-end p-4 cursor-pointer;
+  }
+
+  /* common styles */
+  .button {
+    @apply text-center rounded-full  py-3 px-7 font-semibold  md:self-start interactive-bg-primary;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  .st0{fill:#DB9F80;stroke:#DB9F80;stroke-miterlimit:10;fill-opacity: 0;}
+.st1{fill:#93614C;stroke:#93614B;stroke-miterlimit:10;fill-opacity: 0;}
+.st2{stroke:#000000;stroke-miterlimit:10;fill-opacity: 0;}
+.st3{fill:#FFFFFF;stroke:#FFFFFF;stroke-miterlimit:10;fill-opacity: 0;}
+.st4{fill:#FEFEFE;stroke:#FEFEFE;stroke-miterlimit:10;fill-opacity: 0;}
+.st5{fill:#343D45;stroke:#343D45;stroke-miterlimit:10;fill-opacity: 0;}
+.st6{fill:#9FDBE9;stroke:#9EDBEA;stroke-miterlimit:10;fill-opacity: 0;}
+#potrait {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 400px;
+  height: 100%; 
+
+  /* animation: fill-animate 1s ease-in-out forwards; */
+}
+@keyframes line-animate {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill-animate {
+  /* from {
+    fill-opacity: 0;
+  } */
+  to {
+    fill-opacity: 1;
+  }
+}
 }
