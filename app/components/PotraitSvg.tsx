@@ -1,31 +1,38 @@
 import React, { useEffect } from "react";
 
 const PotraitSvg = () => {
-    useEffect(() => {
-        const logo = document.querySelectorAll("#potrait path");
-        const potraitPaths = document.querySelectorAll("#potrait path:nth-child(n+1)");
-        const potrait = document.querySelector("#potrait");
-        console.log('path',logo)
+  useEffect(() => {
+    const logo = document.querySelectorAll("#potrait path");
+    const potraitPaths = document.querySelectorAll(
+      "#potrait path:nth-child(n+1)"
+    );
+    const potrait = document.querySelector("#potrait");
+    console.log("path", logo);
 
-        for (let i = 0; i < logo.length; i++) {
-            const path = logo[i] as SVGPathElement; // Explicitly type logo[i] as SVGPathElement
-            console.log(path.getTotalLength());
-            (potraitPaths[i] as SVGPathElement).style.strokeDasharray = `${path.getTotalLength()}`; // Convert the number value to a string
-            (potraitPaths[i] as SVGPathElement).style.strokeDashoffset = `${path.getTotalLength()}`; // Convert the number value to a string
+    for (let i = 0; i < logo.length; i++) {
+      const path = logo[i] as SVGPathElement; // Explicitly type logo[i] as SVGPathElement
+      console.log(path.getTotalLength());
+      (
+        potraitPaths[i] as SVGPathElement
+      ).style.strokeDasharray = `${path.getTotalLength()}`; // Convert the number value to a string
+      (
+        potraitPaths[i] as SVGPathElement
+      ).style.strokeDashoffset = `${path.getTotalLength()}`; // Convert the number value to a string
 
-            let delay = i / 7 + 1;
-            (potraitPaths[i] as SVGPathElement).style.animation = `line-animate 2s ease forwards ${delay}s, 
+      let delay = i / 7 + 1;
+      (
+        potraitPaths[i] as SVGPathElement
+      ).style.animation = `line-animate 2s ease forwards ${delay}s, 
             fill-animate 2s ease forwards ${delay + 2}s`;
 
-            console.log("delay", potraitPaths[i]);
-        }
-      }, []);
-    
+      console.log("delay", potraitPaths[i]);
+    }
+  }, []);
+
   return (
     <svg
       version="1.1"
       id="potrait"
-      
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 238.739 354.777"
     >
