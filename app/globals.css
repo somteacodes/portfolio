@@ -47,6 +47,10 @@
   .button {
     @apply text-center rounded-full  py-3 px-7 font-semibold  md:self-start interactive-bg-primary;
   }
+  /* FORM STYLES */
+.input-field {
+  @apply block flex-1  bg-transparent py-3 pl-3 rounded-lg border sm:text-sm sm:leading-6 border-on-surface-variant;
+}
 }
 @layer utilities {
   .text-balance {
