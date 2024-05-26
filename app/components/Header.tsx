@@ -21,31 +21,23 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <a
-              href="projects.html"
+            <Link
+              href="projects"
               aria-label="See my projects"
               className={`menu-item ${pathname === "/projects" ? "menu-active" : ""}`}
             >
               Projects
-            </a>
+            </Link>
           </li>
+          
           <li>
-            <a
-              href="journey.html"
-              aria-label="See my journey"
-              className={`menu-item ${pathname === "/journey" ? "menu-active" : ""}`}
-            >
-              Journey
-            </a>
-          </li>
-          <li>
-            <a
-              href="contact.html"
+            <Link
+              href="contact"
               aria-label="Send me a message"
               className={`menu-item ${pathname === "/contact" ? "menu-active" : ""}`}
             >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
 
@@ -85,40 +77,32 @@ const Header = () => {
 
           <ul className="mobile-navigation-container">
             <li>
-              <a
+              <Link
                 aria-label="Go to the home page"
                 className="mobile-menu-item"
                 href="index.html"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 aria-label="See my projects"
                 className="mobile-menu-item"
-                href="projects.html"
+                href="projects"
               >
                 Projects
-              </a>
+              </Link>
             </li>
+            
             <li>
-              <a
-                aria-label="See my journey"
-                className="mobile-menu-item"
-                href="journey.html"
-              >
-                Journey
-              </a>
-            </li>
-            <li>
-              <a
+              <Link
                 aria-label="Send me a message"
                 className="mobile-menu-item"
-                href="contact.html"
+                href="contact"
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
