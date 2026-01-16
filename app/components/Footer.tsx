@@ -69,7 +69,7 @@ const Footer = () => {
           </svg>
         </Link>
         <Link
-          href="https://github.com/somtocodes"
+          href="https://github.com/somteacodes"
           className="footer-button"
           aria-label="See somtochukwu's github profile"
         >

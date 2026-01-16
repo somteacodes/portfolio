@@ -6,69 +6,53 @@
         "image": "assets/currency-mock.jpg",
         "link": "#",
         "blog": "#",
-        "technologies": "HTML, CSS, JavaScript, JSON"
+        "technologies": ["HTML", "CSS", "JavaScript", "JSON"]
     },
     {
         "id": 2,
         "title": "Cost Forecaster",
-        "excerpt": "A currency converter for multiple currencies",
+        "excerpt": "A cost forecasting application",
         "image": "assets/currency-mock.jpg",
         "link": "#",
         "blog": "#",
-        "technologies": "HTML, CSS, JavaScript, JSON"
+        "technologies": ["HTML", "CSS", "JavaScript", "JSON"]
     },
     {
         "id": 3,
         "title": "Shelton Hire",
-        "excerpt": "A currency converter for multiple currencies",
+        "excerpt": "A tool hiring management system",
         "image": "assets/currency-mock.jpg",
         "link": "#",
         "blog": "#",
-        "technologies": "HTML, CSS, JavaScript, JSON"
+        "technologies": ["HTML", "CSS", "JavaScript", "JSON"]
     },
-    {
-        "id": 4,
-        "title": "Currency Converter",
-        "excerpt": "A currency converter for multiple currencies",
-        "image": "assets/currency-mock.jpg",
-        "link": "#",
-        "blog": "#",
-        "technologies": "HTML, CSS, JavaScript, JSON"
-    },
+     
     {
         "id": 5,
         "title": "Nyem App",
-        "excerpt": "A currency converter for multiple currencies",
+        "excerpt": "An Assistive device Sharing Platform",
         "image": "assets/currency-mock.jpg",
         "link": "#",
         "blog": "#",
-        "technologies": "HTML, CSS, JavaScript, JSON"
+        "technologies": ["HTML", "CSS", "JavaScript", "JSON"]
     },
-    {
-        "id": 6,
-        "title": "Nyem App",
-        "excerpt": "A currency converter for multiple currencies",
-        "image": "assets/currency-mock.jpg",
-        "link": "#",
-        "blog": "#",
-        "technologies": "HTML, CSS, JavaScript, JSON"
-    },
+    
     {
         "id": 7,
         "title": "Swimming Club CMS",
-        "excerpt": "A currency converter for multiple currencies",
+        "excerpt": "A swimming club content management system",
         "image": "assets/currency-mock.jpg",
         "link": "#",
         "blog": "#",
-        "technologies": "HTML, CSS, JavaScript, JSON"
+        "technologies": ["HTML", "CSS", "JavaScript", "JSON"]
     },
     {
         "id": 7,
         "title": "Vue3-Paystack-Integration",
-        "excerpt": "A currency converter for multiple currencies",
+        "excerpt": " A Vue3 Paystack Payment Integration",
         "image": "assets/currency-mock.jpg",
         "link": "#",
         "blog": "#",
-        "technologies": "HTML, CSS, JavaScript, JSON"
+        "technologies": ["Vue3", "JavaScript", "Paystack API"]
     }
 ]

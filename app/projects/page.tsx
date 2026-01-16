@@ -17,19 +17,20 @@ const page = async () => {
       <div className="text-on-surface mt-6">
         <p className="font-bold md:text-3xl text-2xl pb-6">Projects</p>
       </div>
-  <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"> 
-      {data.map((project:any) => (
-        
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        {data.map((project: any) => (
+
           <Link
-            href="/currency"
-            aria-label="Go to currency converter project page"
+            key={project.id}
+            href={`/projects/${project.id}`}
+            aria-label={`Go to ${project.name} project page`}
           >
             <div className="rounded-xl p-6 interactive-bg-surface gap-y-4 cursor-pointer">
               <div className="w-full flex gap-x-4 justify-between">
                 <div>
-                  <p className="text-on-surface text-lg font-bold">Currency Converter</p>
+                  <p className="text-on-surface text-lg font-bold">{project.title}</p>
                   <p className="text-on-surface-variant text-base">
-                    A currency converter for multiple currencies
+                    {project.excerpt}
                   </p>
                 </div>
                 <div className="fill-on-primary-container p-4 w-12 h-12 rounded-full bg-primary-container flex items-center justify-center cursor-pointer hover:bg-primary-hover hover:text-primary-dark-hover">
@@ -60,30 +61,36 @@ const page = async () => {
                 </div>
               </div>
 
-              <div className="rounded-lg overflow-hidden flex w-full h-80 my-4">
+              {/* <div className="rounded-lg overflow-hidden flex w-full h-80 my-4">
                 <picture className="w-full h-full object-cover">
-                  <source
-                    srcSet="assets/currency-mock.webp 1x, assets/currency-mock-2x.webp 2x"
-                    type="image/webp"
-                    className="w-full h-full object-cover"
-                  />
+
                   <img
-                    srcSet="assets/currency-mock.jpg 1x, assets/currency-mock-2x.jpg 2x"
-                    src="assets/currency-mock.jpg"
-                    alt="Currency Converter"
+                    srcSet={`assets/${project.image} 1x, assets/${project.image} 2x`}
+                    src={`assets/${project.image}`}
+                    alt={project.name}
                     className="w-full h-full object-cover"
                   />
                 </picture>
-              </div>
+              </div> */}
 
               <ul className="flex flex-wrap w-full gap-2">
-                <li className="px-4 py-px bg-primary-container text-on-primary-container rounded-full text-sm">HTML</li>
-            
+                {
+                  project.technologies.map((tag: string, index: number) => (
+                    <li
+                      key={index}
+                      className="text-on-surface-variant text-sm bg-surface-variant/20 px-3 py-1 rounded-full"
+                    >
+                      {tag}
+                    </li>
+                  ))
+                }
+               
+
               </ul>
             </div>
           </Link>
-      
-      ))} 
+
+        ))}
       </div>
     </div>
   );
